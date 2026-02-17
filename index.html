@@ -2,95 +2,75 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="theme-color" content="#667eea">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bioquest</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header class="hero">
-            <div class="logo">bioquest</div>
-            <h1>solv1x</h1>
-            <p class="subtitle">• Middle-разработчик •</p>
-        </header>
-
-        <main class="content">
-            <section class="bio-section">
-                <div class="profile-image">
-                    <div class="avatar-placeholder">👨‍💻</div>
-                </div>
-                
-                <div class="bio-content">
-                    <h2>Привет, я solv1x</h2>
-                    <p class="bio-text">
-                        Программист из России, который проводит больше времени за кодом, чем за кофе ☕
-                        Увлекаюсь веб и python кодингом — экспериментирую с оптимизацией своих проектов.
-                    </p>
-                    
-                    <p class="bio-text">
-                        Люблю создавать полезные штуки: от автоматизации рутинных задач до небольших проектов,
-                        которые помогают другим людям. Работаю в основном с Python и веб файлами, иногда играюсь с 
-                        Java.
-                    </p>
-                    
-                    <p class="bio-text">
-                        В свободное время читаю книги и смотрю видео-ролики на YouTube по вёрстке сайтов.
-                    </p>
-                </div>
-            </section>
-
-            <section class="links-section">
-                <h2>Где меня найти</h2>
-                <div class="social-links">
-                    <a href="https://www.youtube.com/@JDKsolv1x" class="social-link youtube-link" target="_blank">
-                        <span class="link-icon">▶️</span>
-                        <span class="link-text">YouTube канал</span>
-                    </a>
-                    <a href="https://t.me/FullStack_Universe" class="social-link telegram-link" target="_blank">
-                        <span class="link-icon">💬</span>
-                        <span class="link-text">Telegram канал</span>
-                    </a>
-                </div>
-                <p class="contact-note">Мой Telegrm usernme: @taoess1 Пишите, всегда рад новым знакомствам и интересным проектам!</p>
-            </section>
-
-            <section class="skills-section">
-                <h2>Чему я обучаюсь/обучен</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>Python & Automation</h3>
-                        <p>Автоматизация рутинных задач, игры, боты</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Web-разработка</h3>
-                        <p>Создание сайтов и веб-приложений</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>React</h3>
-                        <p>Делаю из маленьких веб-приложений полноценный React проект</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Обучение</h3>
-                        <p>Делюсь знаниями через видео и статьи в Telegrm канале!</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <p>&copy; 2026 BioQuest. Все права защищены.</p>
-        </footer>
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-social-links">
+                <a href="https://t.me/FullStack_Universe" class="top-social-link"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="https://www.youtube.com/@JDKsolv1x" class="top-social-link"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://dzen.ru/solv1x" class="top-social-link"><i class="fab fa-yandex-international"></i> Дзен</a>
+                <a href="https://github.com/donvassukrainerussia2009-cpu" class="top-social-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
     </div>
 
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="images/avatar.jpg" alt="Аватар" class="avatar" onerror="this.src='https://via.placeholder.com/200x200/2d3748/ffffff?text=Avatar'">
+                <h1 class="name">solv1x</h1>
+                <p class="title">Full-Stack Developer</p>
+                <p class="description">Программист из России, который проводит больше времени за кодом, чем за кофе ☕ Увлекаюсь веб и python кодингом — экспериментирую с оптимизацией своих проектов.
+
+Люблю создавать полезные штуки: от автоматизации рутинных задач до небольших проектов, которые помогают другим людям. Работаю в основном с Python и веб файлами, иногда играюсь с Java.
+
+В свободное время читаю книги и смотрю видео-ролики на YouTube по вёрстке сайтов.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Языки, которые я знаю</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
     <script src="script.js"></script>
+ 
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">bioquest 2026 - все права защищены</p>
+        </div>
+    </footer>
 </body>
-
 </html>
-
-
-
-
