@@ -51,7 +51,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-primary);
-    background-image: url('images/project3.jpg');
+    background-image: url('project3.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -401,3 +401,4 @@ a, button, .skill-card, .project-card, .social-link {
         transition-duration: 0.01ms !important;
     }
 }
+
