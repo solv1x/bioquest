@@ -1162,7 +1162,7 @@
           Клиент активен
         </div>
         <h1>A-Tools <span class="hl">Aormio</span></h1>
-        <p>Клиент для шерифов и модераторов. Баны, муты, проверки -- всё в пару кликов.</p>
+        <p>Клиент для шерифов и модераторов. Баны, муты, проверки и автомут -- всё в пару кликов.</p>
         <div class="hero-actions">
           <a href="#cta" class="btn btn-primary">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -1218,8 +1218,16 @@
             <div class="feature-row">
               <div class="fi fi-red"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
               <div class="info">
-                <h4>AutoMessageRevise</h4>
-                <p>Автоотправка шаблонов. Команда <code>/revise</code></p>
+                <h4>AutoMessageCheck</h4>
+                <p>Автоотправка шаблонов. Команда <code>/check start &lt;ник&gt;</code> -- отправит готовый шаблон нарушителю. Добавили команду <code>/amc</code>, чтобы вы могли отредактировать сообщение по умолчанию под себя.</p>
+              </div>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+            <div class="feature-row">
+              <div class="fi fi-green"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+              <div class="info">
+                <h4>AutoMute</h4>
+                <p>При включении следит вместо вас за чатом, мутит и отправляет отчёты автоматически! Команда <code>/automute</code></p>
               </div>
               <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
             </div>
@@ -1314,14 +1322,27 @@
             <details class="faq-item">
               <summary>
                 <span class="num">5</span>
-                <span>AutoMessageRevise?</span>
+                <span>AutoMessageCheck?</span>
                 <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
               </summary>
-              <div class="faq-answer"><code>/revise start &lt;ник&gt;</code> -- отправит готовый шаблон нарушителю.</div>
+              <div class="faq-answer">
+                <code>/check start &lt;ник&gt;</code> -- отправит готовый шаблон нарушителю.<br>
+                Команда <code>/amc</code> позволяет отредактировать сообщение по умолчанию под себя.
+              </div>
             </details>
             <details class="faq-item">
               <summary>
                 <span class="num">6</span>
+                <span>AutoMute?</span>
+                <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </summary>
+              <div class="faq-answer">
+                Команда <code>/automute</code>. При включении модуль следит вместо вас за чатом, автоматически мутит нарушителей и отправляет отчёты!
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                <span class="num">7</span>
                 <span>DiscordRPC и TimeChanger?</span>
                 <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
               </summary>
@@ -1332,7 +1353,7 @@
             </details>
             <details class="faq-item">
               <summary>
-                <span class="num">7</span>
+                <span class="num">8</span>
                 <span>Будут обновления?</span>
                 <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
               </summary>
