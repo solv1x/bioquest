@@ -751,105 +751,6 @@
       font-weight: 600;
     }
 
-    /* ==================== TEAM - Search ==================== */
-    .team-search {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 16px;
-      border-radius: 14px;
-      background: var(--glass-bg);
-      backdrop-filter: blur(40px) saturate(1.4);
-      -webkit-backdrop-filter: blur(40px) saturate(1.4);
-      border: 0.5px solid var(--glass-border);
-      margin-bottom: 20px;
-      transition: border-color 0.2s;
-    }
-    .team-search:focus-within {
-      border-color: rgba(56,189,248,0.4);
-    }
-    .team-search svg {
-      flex-shrink: 0;
-      opacity: 0.4;
-    }
-    .team-search input {
-      flex: 1;
-      min-width: 0;
-      background: none;
-      border: none;
-      outline: none;
-      color: #fff;
-      font-size: 15px;
-      font-family: inherit;
-    }
-    .team-search input::placeholder { color: var(--text-3); }
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 10px;
-    }
-    .team-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      padding: 16px 12px;
-      border-radius: 14px;
-      background: var(--glass-bg);
-      backdrop-filter: blur(40px) saturate(1.4);
-      -webkit-backdrop-filter: blur(40px) saturate(1.4);
-      border: 0.5px solid var(--glass-border);
-      transition: all 0.2s ease;
-      cursor: default;
-    }
-    .team-card:hover {
-      border-color: rgba(56,189,248,0.35);
-      transform: translateY(-2px);
-    }
-    .team-card .tc-avatar {
-      width: 52px; height: 52px;
-      border-radius: 13px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--glass-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .team-card .tc-avatar svg { width: 24px; height: 24px; opacity: 0.4; }
-    .team-card .tc-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .team-card .tc-name {
-      font-size: 13px;
-      font-weight: 600;
-      color: #fff;
-      text-align: center;
-      word-break: break-all;
-    }
-    .team-card .tc-role {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--accent);
-      background: var(--accent-dim);
-      padding: 3px 10px;
-      border-radius: 999px;
-    }
-    .team-card .tc-roles {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 4px;
-    }
-    .tc-role.role-admin { color: var(--red); background: rgba(255,69,58,0.12); }
-    .tc-role.role-curator { color: #c0392b; background: rgba(192,57,43,0.14); }
-    .tc-role.role-moder { color: #f472b6; background: rgba(244,114,182,0.14); }
-    .tc-role.role-sheriff { color: #ffd24a; background: rgba(255,210,74,0.14); }
-    .team-empty {
-      text-align: center;
-      color: var(--text-3);
-      font-size: 14px;
-      padding: 30px 0;
-    }
-
     /* ==================== FAQ - iOS Accordion ==================== */
     .faq-list {
       display: flex;
@@ -1077,7 +978,6 @@
       .nav-links a { padding: 10px 12px; border-radius: 8px; }
       .showcase-grid { grid-template-columns: 1fr; }
       .info-grid { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
       .lock-time { letter-spacing: -3px; }
       section { padding: 40px 0; }
     }
@@ -1145,7 +1045,6 @@
         <li><a href="#features">Возможности</a></li>
         <li><a href="#showcase">Скриншоты</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#team">Команда</a></li>
         <li><a href="#info">Инфо</a></li>
         <li><a href="#cta" class="nav-cta">Поддержка</a></li>
       </ul>
@@ -1423,23 +1322,6 @@
       </div>
     </section>
 
-    <!-- TEAM -->
-    <section id="team">
-      <div class="content-wrap">
-        <div class="section-hdr reveal">
-          <span class="label">Команда</span>
-          <h2>Поиск по сотрудникам</h2>
-          <p>Найдите составник по нику</p>
-        </div>
-        <div class="team-search reveal">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input id="teamSearch" type="text" placeholder="Введите ник сотрудника" autocomplete="off" spellcheck="false" />
-        </div>
-        <div class="team-grid reveal" id="teamGrid"></div>
-        <div class="team-empty" id="teamEmpty" hidden>По вашему запросу ничего не найдено</div>
-      </div>
-    </section>
-
     <!-- CTA -->
     <section id="cta">
       <div class="content-wrap">
@@ -1542,41 +1424,6 @@
     // NAV
     document.getElementById('hamburger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
     window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40));
-
-    // TEAM
-    const staff = [
-      { name: 'krollikss', tags: [{ text: 'Админ', cls: 'role-admin' }] },
-      { name: 'Ivanusshka', tags: [{ text: 'Админ', cls: 'role-admin' }] },
-      { name: 'Kaiman4ik', tags: [{ text: 'Куратор', cls: 'role-curator' }] },
-      { name: 'wexTooLikee', tags: [
-        { text: 'Модератор', cls: 'role-moder' },
-        { text: 'Админ A-Tools', cls: 'role-admin' }
-      ] },
-      { name: 'hatechat', tags: [{ text: 'Модератор', cls: 'role-moder' }] },
-      { name: 'Lalatina17', tags: [{ text: 'Шериф', cls: 'role-sheriff' }] },
-      { name: 'Perchila27', tags: [{ text: 'Шериф', cls: 'role-sheriff' }] },
-      { name: 'Buap4ik_', tags: [{ text: 'Шериф', cls: 'role-sheriff' }] },
-      { name: 'Diodp2', tags: [{ text: 'Шериф', cls: 'role-sheriff' }] },
-      { name: 'vem225', tags: [{ text: 'Шериф', cls: 'role-sheriff' }] }
-    ];
-    const teamGrid = document.getElementById('teamGrid');
-    const teamSearch = document.getElementById('teamSearch');
-    const teamEmpty = document.getElementById('teamEmpty');
-    function renderTeam(filter) {
-      const q = (filter || '').toLowerCase().trim();
-      const list = staff.filter(m => !q || m.name.toLowerCase().includes(q));
-      teamEmpty.hidden = list.length > 0;
-      teamGrid.innerHTML = list.map(m => {
-        const badges = m.tags.map(b =>
-          '<div class="tc-role ' + b.cls + '">' + b.text + '</div>'
-        ).join('');
-        return '<div class="team-card"><div class="tc-avatar">' +
-          '<img src="https://mc-heads.net/avatar/' + encodeURIComponent(m.name) + '/100" alt="' + m.name + '" loading="lazy" />' +
-          '</div><div class="tc-name">' + m.name + '</div><div class="tc-roles">' + badges + '</div></div>';
-      }).join('');
-    }
-    renderTeam('');
-    teamSearch.addEventListener('input', () => renderTeam(teamSearch.value));
 
     // REVEAL
     const ro = new IntersectionObserver(es => {
